@@ -11,7 +11,7 @@ const COOKIES = process.env.GR_COOKIE
 
 const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN || '';
 const TG_CHAT_ID = process.env.TG_CHAT_ID || '';
-const DOMAIN = process.env.DOMAIN || 'glados.network';
+const DOMAIN = process.env.DOMAIN || 'glados.cloud';
 
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36';
@@ -19,20 +19,20 @@ const UA =
 async function checkin(cookie) {
   const headers = {
     cookie,
-    referer: 'https://glados.rocks/console/checkin',
-    origin: 'https://glados.rocks',
+    referer: 'https://glados.cloud/console/checkin',
+    origin: 'https://glados.cloud',
     'user-agent': UA,
     'content-type': 'application/json;charset=UTF-8'
   };
 
   const checkinRes = await axios.post(
-    'https://glados.rocks/api/user/checkin',
-    { token: 'glados.one' },
+    'https://glados.cloud/api/user/checkin',
+    { token: 'glados.cloud' },
     { headers }
   );
 
   const statusRes = await axios.get(
-    'https://glados.rocks/api/user/status',
+    'https://glados.cloud/api/user/status',
     { headers }
   );
 
