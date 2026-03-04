@@ -11,7 +11,7 @@ const CONFIG = {
   // GlaDOS配置
   SERVICE_GLADOS: {
     COOKIES: [],
-    DOMAIN: 'glados.network',
+    DOMAIN: 'glados.cloud',
     ENABLED: true
   },
   
@@ -120,11 +120,11 @@ async function serviceGladosCheckin() {
   const results = [];
   for (const cookie of CONFIG.SERVICE_GLADOS.COOKIES) {
     try {
-      const checkin_url = "https://glados.rocks/api/user/checkin";
-      const state_url = "https://glados.rocks/api/user/status";
-      const referer = "https://glados.rocks/console/checkin";
-      const origin = "https://glados.rocks";
-      const payload = { token: "glados.one" };
+      const checkin_url = "https://glados.cloud/api/user/checkin";
+      const state_url = "https://glados.cloud/api/user/status";
+      const referer = "https://glados.cloud/console/checkin";
+      const origin = "https://glados.cloud";
+      const payload = { token: "glados.cloud" };
 
       const checkinResponse = await fetch(checkin_url, {
         method: "POST",
