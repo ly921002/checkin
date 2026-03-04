@@ -3,7 +3,7 @@ const DEFAULT_CONFIG = {
   TRIGGER_PATH: '/glados-checkin',
   TG_BOT_TOKEN: '',
   TG_CHAT_ID: '',
-  DOMAIN: 'glados.network' // 机场地址默认值
+  DOMAIN: 'glados.cloud' // 机场地址默认值
 };
 
 let config = { ...DEFAULT_CONFIG };
@@ -59,12 +59,12 @@ async function initializeConfig(env) {
 
 // 执行签到操作
 async function checkin(cookie) {
-  const checkin_url = "https://glados.rocks/api/user/checkin";
-  const state_url = "https://glados.rocks/api/user/status";
-  const referer = "https://glados.rocks/console/checkin";
-  const origin = "https://glados.rocks";
+  const checkin_url = "https://glados.cloud/api/user/checkin";
+  const state_url = "https://glados.cloud/api/user/status";
+  const referer = "https://glados.cloud/console/checkin";
+  const origin = "https://glados.cloud";
   const useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36";
-  const payload = { token: "glados.one" };
+  const payload = { token: "glados.cloud" };
 
   try {
     const checkinResponse = await fetch(checkin_url, {
